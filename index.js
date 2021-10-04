@@ -25,12 +25,12 @@ function addManager() {
     {
         type: 'input',
         message: "what is the manager's office number?",
-        name: "phoneNumber",
+        name: "officeNumber",
     }
     ]).then(managerAnswers => {
         console.log(managerAnswers);
     const  { name, id, email, phoneNumber } = managerAnswers; 
-    const manager = new Manager (name, id, email, phoneNumber);
+    const manager = new Manager (name, id, email, officeNumber);
 
     teamArray.push(manager); 
 })
