@@ -4,6 +4,7 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const htmlGen = require("./lib/htmlGenerator");
+const Choices = require("inquirer/lib/objects/choices");
 
 const teamArray = [];
 
@@ -97,3 +98,13 @@ function addIntern() {
 };
 
 addIntern();
+
+const initPrompts = () => {
+    return inquirer.prompt([
+        {
+            type: 'list',
+            name: 'occupation',
+            message: 'Please select one of the following...',
+            choices: ['add an engineer', 'add an intern', 'finish']
+        }
+    ])}
