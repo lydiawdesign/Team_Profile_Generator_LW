@@ -104,19 +104,19 @@ const initPrompts = () => {
             message: 'Please select one of the following...',
             choices: ['add an engineer', 'add an intern', 'finish']
         }
-    ]).then(answers => {
-        switch (answers.initPrompts) {
-            case "add an engineer";
-                addEngineer()
+    ]).then(choice => {
+        switch (choice.initPrompts) {
+            case "add an engineer":
+                addEngineer();
                 break;
 
-            case "add an intern";
+            case "add an intern":
                 addIntern();
                 break;
             default:
                 finish();
-        }
-    }
+        };
+    });
 };
 
 const finish = () => {
