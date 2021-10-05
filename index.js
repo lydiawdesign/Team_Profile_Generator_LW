@@ -7,29 +7,28 @@ const htmlGen = require("./lib/htmlGenerator");
 
 const teamArray = [];
 
-addManager();
-
-function addManager() {
-    inquirer.prompt([{
+const addManager = () => {
+    return inquirer.prompt([
+        {
         type: 'input',
         message: "What is the manager's name?",
         name: "name",
-    },
-    {
+        },
+        {
         type: 'input',
         message: "What is the manager's id?",
         name: "id",
-    },
-    {
+        },
+        {
         type: 'input',
         message: "what is the manager's email address",
         name: "email",
-    },
-    {
+        },
+        {
         type: 'input',
         message: "what is the manager's office phone number?",
         name: "officeNumber",
-    }
+        }
     ]).then(answers => {
     const manager = new Manager (answers.name, answers.id, answers.email, answers.officeNumber);
 
@@ -39,8 +38,8 @@ function addManager() {
 })
 };
 
-function addEngineer() {
-    inquirer.prompt([{
+const addEngineer = () => {
+    return inquirer.prompt([{
         type: 'input',
         message: "What is the engineer's name?",
         name: "name",
@@ -67,8 +66,8 @@ function addEngineer() {
 });
 };
 
-function addIntern() {
-    inquirer.prompt([{
+const addIntern = () => {
+    return inquirer.prompt([{
         type: 'input',
         message: "What is the intern's name?",
         name: "name",
@@ -120,5 +119,7 @@ const initPrompts = () => {
 };
 
 const finish = () => {
-     fs.writeFile(htmlGen(teamArray));
-}
+     fs.writeFile(myPage(teamArray));
+};
+
+addManager();
