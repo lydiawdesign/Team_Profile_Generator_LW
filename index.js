@@ -108,7 +108,6 @@ const initPrompts = () => {
             case "add an engineer":
                 addEngineer();
                 break;
-
             case "add an intern":
                 addIntern();
                 break;
@@ -119,7 +118,7 @@ const initPrompts = () => {
 };
 
 const finish = () => {
-     fs.writeFile(myPage(teamArray));
+     fs.writeFile((teamArray),"utf-8");
 };
 
 addManager();
