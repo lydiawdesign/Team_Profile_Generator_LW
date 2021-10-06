@@ -1,41 +1,41 @@
 const Engineer = require('../lib/Engineer');
-const manager = new manager('lydia','123', 'lydia@gmail.com', 'lydiawdesign')
+const engineer = new Engineer ('lydia','123', 'lydia@gmail.com', 'lydiawdesign');
 
-describe('employee', () => {
+describe('engineer', () => {
     it('should return an object from constructor', () => {
-      expect(employee.name).toBe("lydia");
-      expect(employee.id).toBe("123");
-      expect(employee.email).toBe("lydia@gmail.com");
-      expect(employee.officeNumber).toBe("5137777777");
+      expect(engineer.name).toBe("lydia");
+      expect(engineer.id).toBe("123");
+      expect(engineer.email).toBe("lydia@gmail.com");
+      expect(engineer.github).toBe("lydiawdesign");
     });
 });
 
 describe('getName()', () => {
     it('should get the name from this method', () => {
-      expect(employee.getName()).toBe('lydia')
+      expect(engineer.getName()).toBe('lydia')
     });
 });
 
 describe('getId()', () => {
     it('should get the id from this method', () => {
-      expect(employee.getId()).toBe('123')
+      expect(engineer.getId()).toBe('123')
     });
 });
 
 describe('getEmail()', () => {
     it('should get the office phone number from this method', () => {
-      expect(employee.getEmail()).toBe('lydia@gmail.com')
+      expect(engineer.getEmail()).toBe('lydia@gmail.com')
     });
 });
 
 describe('getGithub()', () => {
     it('should get the gitHub username from this method', () => {
-      expect(employee.getGithub()).toBe('lydiawdesign')
+      expect(engineer.getGithub()).toBe('lydiawdesign')
     });
 });
 
 describe('getRole()', () => {
     it('should get the role from this method', () => {
-      expect(employee.getRole()).toBe('Engineer')
+      expect(engineer.getRole()).toBe('Engineer')
     });
 });

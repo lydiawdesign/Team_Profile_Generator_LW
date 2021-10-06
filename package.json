@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "## Your Task",
   "main": "index.js",
-
   "dependencies": {
     "inquirer": "^8.1.5"
   },

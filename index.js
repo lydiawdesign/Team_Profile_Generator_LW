@@ -63,6 +63,8 @@ const addEngineer = () => {
     const engineer = new Engineer (answers.name, answers.id, answers.email, answers.github);
 
     teamArray.push(engineer); 
+
+    initPrompts();
 });
 };
 
@@ -91,6 +93,8 @@ const addIntern = () => {
     const intern = new Intern (answers.name, answers.id, answers.email, answers.school);
 
     teamArray.push(intern); 
+
+    initPrompts();
 });
 };
 
@@ -103,8 +107,8 @@ const initPrompts = () => {
             message: 'Please select one of the following...',
             choices: ['add an engineer', 'add an intern', 'finish']
         }
-    ]).then(choice => {
-        switch (choice.initPrompts) {
+    ]).then(data => {
+        switch (data.occupation) {
             case "add an engineer":
                 addEngineer();
                 break;
@@ -118,7 +122,12 @@ const initPrompts = () => {
 };
 
 const finish = () => {
-     fs.writeFile((teamArray),"utf-8");
+     fs.writeFile("template.html", htmlGen(teamArray), err => {
+         if (err) console.error(err)
+         else {
+             console.info('successful');
+        }
+    });
 };
 
 addManager();

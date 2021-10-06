@@ -1,41 +1,41 @@
 const Manager = require('../lib/Manager');
-const manager = new manager('lydia','123', 'lydia@gmail.com', '5137777777')
+const manager = new Manager('lydia','123', 'lydia@gmail.com', '5137777777')
 
-describe('employee', () => {
+describe('manager', () => {
     it('should return an object from constructor', () => {
-      expect(employee.name).toBe("lydia");
-      expect(employee.id).toBe("123");
-      expect(employee.email).toBe("lydia@gmail.com");
-      expect(employee.officeNumber).toBe("5137777777");
+      expect(manager.name).toBe("lydia");
+      expect(manager.id).toBe("123");
+      expect(manager.email).toBe("lydia@gmail.com");
+      expect(manager.officeNumber).toBe("5137777777");
     });
 });
 
 describe('getName()', () => {
     it('should get the name from this method', () => {
-      expect(employee.getName()).toBe('lydia')
+      expect(manager.getName()).toBe('lydia')
     });
 });
 
 describe('getId()', () => {
     it('should get the id from this method', () => {
-      expect(employee.getId()).toBe('123')
+      expect(manager.getId()).toBe('123')
     });
 });
 
 describe('getEmail()', () => {
     it('should get the email from this method', () => {
-      expect(employee.getEmail()).toBe('lydia@gmail.com')
+      expect(manager.getEmail()).toBe('lydia@gmail.com')
     });
 });
 
 describe('getOfficeNumber()', () => {
     it('should get the office phone number from this method', () => {
-      expect(employee.getOfficeNumber()).toBe('5137777777')
+      expect(manager.getOfficeNumber()).toBe('5137777777')
     });
 });
 
 describe('getRole()', () => {
     it('should get the role from this method', () => {
-      expect(employee.getRole()).toBe('Manager')
+      expect(manager.getRole()).toBe('Manager')
     });
 });
