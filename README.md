@@ -1,4 +1,4 @@
-# 10 Team Profile Generator (Lydia Williamson)
+# Team Profile Generator (Lydia Williamson)
 
 ## User Story
 
