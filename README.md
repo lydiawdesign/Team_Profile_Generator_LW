@@ -38,14 +38,14 @@ THEN I exit the application, and the HTML is generated
 ```
 
 ## Mock-Up
+![image](https://user-images.githubusercontent.com/87274229/136132139-94c4526d-f1e0-4db7-b739-148ed05f880d.png)
 
 
-### Walkthrough Video: 
+## Walkthrough Video: 
 https://youtu.be/Nkcqnp-BPl8
 
 
-### Technologies Used
-
+## Technologies Used
 
  - javascript 
  - node.js
@@ -53,7 +53,7 @@ https://youtu.be/Nkcqnp-BPl8
  - jest
  - npm fs
 
-### Installation Instructions
+## Installation Instructions
 
 
 
